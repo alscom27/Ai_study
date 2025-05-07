@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 태그 종합 예제</title>
+</head>
+<style>
+
+ @keyframes spin{
+    from{transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+ }
+ @keyframes rotateScales{
+    0%{transform: rotate(0deg) scale(2);}
+    50%{transform: rotate(180deg) scale(0.3);}
+    100%{transform: rotate(360deg) scale(2);}
+ }
+ @keyframes changeColor{
+    0%{background-color: red; transform: scale(1);}
+    15%{background-color: orange;transform: scale(2)}
+    30%{background-color: yellow;transform: scale(3)}
+    45%{background-color: green;transform: scale(4)}
+    60%{background-color: skyblue;transform: scale(5)}
+    70%{background-color: blue;transform: scale(4)}
+    85%{background-color: blueviolet;transform: scale(3)}
+    100%{background-color: purple;transform: scale(2)}
+ }
+
+ .rotate-img:hover{
+    transition: all 0.3s ease;
+    animation : rotateScales 0.5s infinite linear;
+ }
+
+ .move-a{
+    cursor: default;
+    display: inline-block;
+    transition:  transform 1.5s ease;
+ }
+
+ .move-a:hover{
+    cursor: default;
+    transform: translateX(300px);
+ }
+
+ button{
+    width: 150px;
+    height: 50px;
+    border-radius: 10px 10px 10px 10px;
+    background-color: blue;
+    color : white
+ }
+
+ button:hover{
+   animation: changeColor 1s infinite linear;
+ }
+ .center-btn{
+    width: 150px;
+    margin: 80px auto;
+ }
+
+</style>
+<body>
+    <h1>Conda 가상환경 구성하기</h1>
+    <h3>Conda란 무엇인가?</h3>
+    <ul>
+        <li>Conda는 가상환경 관리 + 패키지 관리를 동시에 할 수 있는 오픈소스 툴입니다</li>
+        <li>Python뿐만 아니라 R,C++ 라이브러리 등 다양한 언어와 패키지 관리를 할 수 있습니다.</li>
+        <li>Anaconda, Miniconda 설치 시 함께 제공됩니다.</li>
+    </ul>
+
+    <h3>콘다 가상환경 주요 명령어 모음</h3>
+    <p class="move-p">이 문서는 콘다의 가상환경 명령어 모음입니다.<br>
+    자세한 정보는 <a class="move-a" href="https://docs.conda.io/en/latest/">여기</a>를 클릭하세요.<br>
+아래는 예시 이미지입니다.</p>
+    
+    <img class="rotate-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAWIAAACOCAMAAAA8c/IFAAAAmVBMVEX///9DsCo6rR0sqgBDsSiQzIXm9OM3rBir2KMwqwjc7tk+riOk1Zyz263U69A9riL5/fjz+vLK5sXr9unm8+NywWPa7tZXt0Op16HG5MCWz4xguk6+4bjQ6csVpQCc0pJNtDaAxnOy26tLszN6xGxqvllzwWR9xXCHyXu74LVqvlpWt0Gv3bJswWthvV5ItD+74r99x3uZ0pnKiol9AAANJ0lEQVR4nO2ca2OjoBKGEZIQYho19/utSZo2u93u/v8fdxAVRsVLTHLOhzPPl7ZWBV7HYRhAQhAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRBEM+r0esNpJ7jnmqAz2AwHvVH1mcPhtGnFnoO/2GQPBYNh579W/HA324XazreC8dvHZlzjokH/yxMxfNZelz6bMxNsWHXHbj+imynHQvdzU+O5Qt4F66cOjC5bibO+7zaN8NcXJvhKGpoUqS8cPusQfzotb8G0zQV3HY1LBTuv/cLzPXkOG5RXpM94REqLIDmaQdrC5VjHFCLWwnEoPLDZ7tejYHrdXmvfoyGjwc5jnsPGsi2O1PiDLeVR+UvQLhZssWLUyeFyviu6phWewHqlVWkn96RtcLTD8iXFeJzN3mq2cybtQYCTx9tD9Mtmu6t5i2b4w9BYpycmH+WFejN55CgPHJks9sqO9oumM+EWNJqLuf0aJbEjSl1fgcSiUOLosfYLbwjYhHdx382B84qMbqvZpUM+t3e6nLsYtslIecjBmEyltXDVNv8sHOGThRAzmyRXViSwEvlmNdVWLEhZa5pIHJbo1XCnZ1VnsUj+Hm+npMcO7ZsgZL+svr4p7e2nfIbsqoScKHcpu/2RQ1VlpONwWTd7zXjPy1tsuYYkEjtuq6RTbCixrPWk2KdF9CJv486SA29cHpTm25NS9/cVVzfGX3GxITvqUHYIQucgqyA7PdUxqFYq93VKX7QpNeG4xYd8Ya3kAbwXq9FYYofSiojw5MVVS3rc/irUvb84bQOyYHXkakDwTh3Ri9rFQjvuirDTI5Ec7i1uchhqGD6L+x4A/8qVlkjseLdCjZtLLFtQ6ixGSbW9SXwkkrgl+CK0qbqa3ceIyUh1G0vckg5ANjEMJmR8vlSGLfVULgGGs+taCkuNz9nitMQOXWX/l/CIxA4rCy30nSNjUi1RjuKTyfd3OSu5tDnBxvf9YBqozsuTijjyVZOOMtj6ZMDYVQUaqnHC2Mcgo7Arg1NBZegkuJfR+CNTnpHYoTn9YyolFgaWisqVeMV27Jt60zgKDrZDKfGYbGVR9WKSuzGDyeEX47JcRv0wGm6zBfG58mxBV1mx0B1UkLYnj936G/VPv/d2EeleUGSqDSR2+IRYqZIYuEx/tOmvWLpIVuiPd+BEFjfn0CLBMiCfXbLbVnWWjViQz9Vt9nVVtRq8L+WDFge/0+sJFj/m4TlqARguzKCpuuwjFZ0Fc5pqcWYoByXO23jEHRIrRjuRGgDxgmjFhxWju+TgKlK2L8OqF7C5kjfhuq44kCAsYCpdc3s4CsuUQ+epT0arOHIQRqk+rKlY5UPmHYw2XC/1v5TEjrAOWu+VWFa2DV2XV+CBuqlnz2ObHTlsOdwcb1tbjPk4zpkMopoT4t2kKfdSNtcZbuNaMeNQRrA1zOq+eg6wKp4K6NMSO8IW7d8vsXwDKXiswt7lpcvmWtJ+a7tlH6/Jtc25DFNUzaUb6HO2HGS90XgVeQmg/AW4iaKkmb8CGjM4kstIbH1GTSQmwR7Ui9u86joTkoDXy78rc3sH0jfJ919F43QpB3FmWAnYMY9ChXvAiEtSZkBjCkcgWYkdyxiwkcTEfzd2zG0ZnVsm9BAv8b1ppFOVsctgG8Y+sje92nvizSX1Dn0Y7ZjtkcT4e9MgaMY5iR2Wa2kzickIWKnIm/EwG1eHo6pXI+NZFg5uRkEwmo788gxjTGCMmJdmTcamRdCm8hLnn1RDiaEn4PlE3yo34heVcwOPstm+vwEfVK+8o+6VYUbQBui/W+aoRWLYlyqaShyn0VSJTvZ/xsFpn+0WjX2exiHsd3v9DulumbeqmfM3tlBpA8ZVCOOCjMSw10y7KLvE42qJQT+RG3/oXto70cKTno10DMc9E9IjXUWpXwUYP+FWDujNews8hUkDXaHrTDmpxlYMzDjb4Y11xYUxE+9kv82z6JGFF47vuezwD2xf7yLTZ9Toj7W1uCbjoyUW477R2BVw8q25xAtuKVJxTe4ptV+YO71yniMcyc2jJytkQ3Y1MyBmlG/ps7Msaf5kI3GPtIHGFDS2ucQgz5Oun4k2wtyEDu9SBTyfw5hMVFtcdlI5zDpMtEcrSOFABqZdOuyDEpOT6RFdx/S8jX1xqqtI+Z5lUpIK0t/uMZQHWEknPKOOx2b9QV2FiZbEEhXl8I1X0V1jSmLyZYJsz0yDNLdi8OJw2LmYmkTZLHPWa/KXMXt+Iv6MfYW96vin5kUW0cqKSGyK66RBWmKYtPN0//mAxMY+ORw1zpPDsYs2mSxer93N8FSeSyq1OXHbLJsN4+tEnYHKREusjSUjMRz16mmQByQ23XHKPk2pkW0bq+YFCxiegnyQLGzCbUvDFEUtTMxWqy/+SGyU6hAqIzEJQIYsmep7wBdv9EmwSZ/JUT1c0kW0KgZQD8HVrINsaJ+K8rGw4fkSw4G2wy/q0ANWbJf4PeewTEbWmvt6El44d3ZmV9mTrycvchSJxIWOQjIFqTuu6vGAxAubowDeQx9LZvtrDKGa897yyZk7VLRHyphrYbq73ApSCzp9aDxeXmIyBBqHMfojEpsUCnCyOpIDQz7zYKsWMT7AfkquqkKUrbp1IwqtEK8xDQOCNv02WiROLcoQu4ckNrP4pkgzX85A1suMomtE+A1Zm9UQLt/WNOMvk0ypPnlqJNa3t0mcDDMjGfqPSDwzQw892tHuisJU19AyLno2PTUh63ER9um05sJPENpXn9y3DKKsEpMl6PPY566xxDCbnRRpFs2m19zqoJ2+bGFxJxxU0rb/8zeM/2n1BSELy7tfiG4u6FLsEpMDmBzms+S3uyX+NGkgnQs+eLlD0bmvTwap6CBaf/JL1A3BQTKzcL1UwtAWQBVITCa2dZ53S2z8hA4oQHiW6aFNMS9b9Cr9Kv0bl9ZyaL2EiGlEZU8M/KJpXJHEcD61scRgIZh2sMa1taYDSO+qB+8vSwbJ8XzSzh/m0HrpaeNfqwJK8yJCL1QoMblllsM1kNg8VHcfH/KBlxdpTHl1clqNCKR7+BX//pvmVp/ZAQtVyrNUYD4YKlUscdDKzV/eKXEXTI8mfq9vc0A5WgV3fJgD1WsBw3SMdVW7DO5WK+jEJubhZ6c1U8zAJD9IlRZLTEbZNZZ3SgxXeOh4opbCr1tSIcMZ+jtpn2hFWaEM/oS5LtxPAxe+loyiJyATfAHHSyTO70m6S+IABiXJC3asJ7H2K09HDtRZMq7rSRvis2y7156SCmp8Bj5TFHV5X3CZKQztyyTOrVu+R+KxC94B7fzfc87HTq18QBNCxyqSoHDsUsdlFyCav76FzeI8tWQnZWt259LZg/AgHdmXSkwWaY3vkHgN96fp1eYL4dSjOgRtSl847p/kj+BbVsgTzvVt0On0ht0LD52jy/515PgPaNxOLX495+ekUotfM0v4yiVWe3kaSDy6QC2pzjrMahpx5W7LB1jJ2Phb/zVXS6Epj7Yzhw6hJf5MpYHz1Pr+Pay4xw7pJdzdzBLu9AxUhcRkl9KqnsTTK0sFfF7yUIHjsW/uNfsmXrekIuwj+G/z518Gu3Uq3qOorhd2hnqYOc68zuy2i/Z6+723SWYjQjbZXyUxnPkvklj4QcJoum6/ZzYJG4PUSStn//lm5WpWBtXfRn0naq+osWMS/PvDBKc0NGXvr+4EhhwOsTMuM9pOwz1h2U6T3RZWKTGc+S/cTsM0sq7pEsG6JhPF8aJtTGZk8rpkkJKL/oGJkNFwvmwv+z9Ag/EfN/XGH7PhVQH5jV/VEpOzFq3RpjDj0A410oIgwfyqZdyRxq74VXbKL9ldp7cX1dOY5/vpGhKbmf/7JXbB2jwzEC0Zh4KTXriRfxq+3eK70BeNw0gj+8YvamzQzW7qDakjsZ75v3+DbgvctZ6B6km8ly6pCFZhtMb+WtOm47+hmCznqTpO5TZzm+3UkVjP/BdM8hfCTiBANLsDS1eumUm8ly6pIPOwU6bs+yeT1Qt+vsP/eNZdrxUfS9hbF+/Wkjix2Ds/ltBKzRKYFY7lKXc9iZdf9v1URqcwtPQE//43HCud/c7w37cQavBxttdxUPbJjwL3V0/iOKK9w4pdnslI+tpNVIS8d03kPETnpEJiNxx3UFf9UBEYZavi5WuLme3DNfJJFX64pmDlZA4181/Xij3OVtlcmUkAVa2F13mMVy6piAjmexbFtfqjEVSIgn1MCerzSyAYdilnXyUfLLiJeFxV9ZWYcOY/JXHB55eEYPT0lr/ZTn/DqWoSf7FNbuVVnPkMxm8f4dxAVHUhZu066y+n/UkLfERsURpfBvOuYl65QGTOxDbVBUzjS1Mc14OCZ3WMC6pOBQ+SOr1sgJch6A3Xx+PbetO5Y0bL70w3g0HvqdH7YPM//mgegiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAI8n/BfwAzmrFb0QN7GAAAAABJRU5ErkJggg==" alt="conda">
+
+    <h3>콘다 가상 환경 장점</h3>
+    <ul>
+        <li>버전별 의존성 해결</li>
+        <li>편리한 관리</li>
+        <li>빠른 설치</li>
+    </ul>
+
+    <h3>가상환경 구성순서</h3>
+    <ul>
+        <li>conda create -n streamlit_env python=3.10</li>
+        <li>conda activate streamlit_env</li>
+        <li>conda install notebook</li>
+    </ul>
+<div class="center-btn">
+<button>눌러보세요!</button>
+</div>
+</body>
+</html>
