@@ -1,2 +1,52 @@
+# 환경 파일
 .env
-Deep_learning/data/cifar-10-python.tar.gz
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Jupyter 노트북 체크포인트
+.ipynb_checkpoints/
+
+# 캐시 및 로그
+*.log
+*.cache
+*.tmp
+
+# 학습 관련 결과/가중치
+*.pt
+*.onnx
+*.engine
+*.tflite
+*.ckpt
+*.pth
+
+# YOLOv8 결과 디렉토리
+runs/
+weights/
+results/
+inference_output/
+
+# 대용량 데이터셋
+*.zip
+*.tar.gz
+*.tar
+*.rar
+
+# 특정 데이터셋 (예: CIFAR, COCO 등)
+Deep_learning/data/
+datasets/
+data/
+images/
+labels/
+
+# IDE 설정
+.vscode/
+.idea/
+
+# OS 시스템 파일
+.DS_Store
+Thumbs.db
+
+# 추가
+Deep_learning/imgs/

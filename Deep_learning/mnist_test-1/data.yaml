@@ -1,0 +1,21 @@
+names:
+- '0'
+- '1'
+- '2'
+- '3'
+- '4'
+- '5'
+- '6'
+- '7'
+- '8'
+- '9'
+nc: 10
+roboflow:
+  license: Public Domain
+  project: mnist_test-el2lc
+  url: https://universe.roboflow.com/yolocustomdata-yg3jg/mnist_test-el2lc/dataset/1
+  version: 1
+  workspace: yolocustomdata-yg3jg
+test: ../test/images
+train: ../train/images
+val: ../valid/images

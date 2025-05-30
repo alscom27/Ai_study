@@ -1,0 +1,28 @@
+names:
+- bread
+- cheese
+- foods
+- fried_chicken
+- fruit
+- hamburger
+- meet
+- nuts
+- pasta
+- pizza
+- red_wine_bottle
+- red_wine_glass
+- salad
+- steak
+- white_wine_bottle
+- white_wine_glass
+- wine_bottle
+nc: 17
+roboflow:
+  license: Public Domain
+  project: foods_wines
+  url: https://universe.roboflow.com/yolocustomdata-yg3jg/foods_wines/dataset/1
+  version: 1
+  workspace: yolocustomdata-yg3jg
+test: ../test/images
+train: ../train/images
+val: ../valid/images

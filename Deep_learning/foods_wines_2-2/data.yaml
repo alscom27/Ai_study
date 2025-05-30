@@ -1,0 +1,22 @@
+names:
+- bread
+- cheese
+- fruit
+- meet
+- noodle
+- nuts
+- pizza
+- salad
+- winebottle
+- wineglass
+- winelabel
+nc: 11
+roboflow:
+  license: Public Domain
+  project: foods_wines_2
+  url: https://universe.roboflow.com/yolocustomdata-yg3jg/foods_wines_2/dataset/2
+  version: 2
+  workspace: yolocustomdata-yg3jg
+test: ../test/images
+train: ../train/images
+val: ../valid/images
